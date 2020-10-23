@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>SIGN UP</title>
+<body>
+
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+
+
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCoVmJcwqiNXjURxY2A0NqD8e6qwp39S0Q",
+    authDomain: "iwp1-33eb7.firebaseapp.com",
+    databaseURL: "https://iwp1-33eb7.firebaseio.com",
+    projectId: "iwp1-33eb7",
+    storageBucket: "iwp1-33eb7.appspot.com",
+    messagingSenderId: "175987720835",
+    appId: "1:175987720835:web:69707d73f7e1fccedd91b6",
+    measurementId: "G-17JVR30ESK"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  function myFunction() {
+  firebase.database().ref("User").set({ name:document.getElementById("name").value,
+  password:document.getElementById("pass").value});
+  
+}
+</script>
+
+
+
+
+
+<center><img src="C:\Users\reddy\Downloads\IWP Project\images\buy.png" alt="Logo" style="width:100px;height:100px;">
+
+
+<h1><center><b>SIGN UP</b></h1><br>
+
+<br>
+	
+<h3><center><label>Email<br> <input type="email" placeholder="email" id="name" required></label></h3><br>
+
+
+
+<h3><center><label for="pwd">Password<br></label><input type="password" placeholder="password" id="pass" required></h3>
+
+
+<br>
+
+<center><button type="submit" onclick="myFunction()">SUBMIT FORM</button> <center><br><button type="reset"> RESET FORM</button><br>
+
+
+
+  </body>
